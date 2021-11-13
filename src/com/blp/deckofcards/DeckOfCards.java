@@ -46,6 +46,20 @@ public class DeckOfCards {
             }
         }
     }
+    public void shuffleCards(){
+        for (int i = 0; i < cardsArr.size(); i++)
+        {
+            int min = 0;
+            int max = cardsArr.size() - 1;
+            int position = (int)(Math.random()  * (max - min + 1) + min);
+            int newPosition = (position - i);
+            if(newPosition < 0 || newPosition > 52)
+                newPosition = 0;
+            String temp = cardsArr.get(newPosition);
+            cardsArr.set(newPosition, cardsArr.get(i));
+            cardsArr.set(i, temp);
+        }
+    }
         public String getCards () {
             int position = (int) (Math.random());
             String returnValue = cardsArr.get(position);
@@ -82,4 +96,6 @@ public class DeckOfCards {
             deckofcards.printCardList();
         }
     }
+
+
 
