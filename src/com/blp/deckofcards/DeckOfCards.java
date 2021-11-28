@@ -1,6 +1,5 @@
 package com.blp.deckofcards;
 
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -80,6 +79,8 @@ public class DeckOfCards {
                 System.out.print("\ncards of " + playerObj.name + " : ");
                 playerObj.getCardList();
                 System.out.print("\n ");
+                System.out.print("\nunique cards: ");
+                playerObj.getUniqueCards();
             }
         }
     public void setPlayerSequence(){
@@ -109,10 +110,8 @@ public class DeckOfCards {
             DeckOfCards deckofcards = new DeckOfCards();
             deckofcards.generateCards();
             deckofcards.addPlayers();
-            deckofcards.printCards();
             deckofcards.distributeCards();
             deckofcards.printCardList();
-            deckofcards.setPlayerSequence();
         }
     }
 
