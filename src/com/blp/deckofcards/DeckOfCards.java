@@ -105,11 +105,13 @@ public class DeckOfCards {
         public static void main (String[]args){
             System.out.println("Welcome to the Decks of Cards Program");
             Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the number between 2 to 4");
             System.out.print(" Enter number of players :");
             int playerCount = sc.nextInt();
             DeckOfCards deckofcards = new DeckOfCards();
             deckofcards.generateCards();
             deckofcards.addPlayers();
+            deckofcards.setPlayerSequence();
             deckofcards.distributeCards();
             deckofcards.printCardList();
         }
